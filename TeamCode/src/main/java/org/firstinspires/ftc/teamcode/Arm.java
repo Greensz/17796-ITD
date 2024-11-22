@@ -17,24 +17,16 @@ public class Arm {
         Driver2 = opMode.gamepad2;
         leftServo = (Servo) opMode.hardwareMap.get("L wrist");
         rightServo = (Servo) opMode.hardwareMap.get("R wrist");
-
-
         leftServo.setDirection(Servo.Direction.REVERSE);
         rightServo.setDirection(Servo.Direction.FORWARD);
-        armServo(scorePosition, scorePosition);
-        //        opMode.time
     }
 
     public static void teleOp() throws InterruptedException {
         if (Driver2.a) {
-            armServo(intakePosition, intakePosition);
+            rightServo.setPosition(scorePosition);
+            leftServo.setPosition(scorePosition);
         }
-        if (Driver2.y) {
-            armServo(scorePosition, scorePosition);
-        }
-    }
-        public static void armServo ( double setPositionRight, double setPositionLeft){
-            rightServo.setPosition(setPositionRight);
-            leftServo.setPosition(setPositionLeft);
-        }
-        }
+        if (Driver2.b) {
+            rightServo.setPosition(intakePosition);
+            leftServo.setPosition(intakePosition);
+        }}}
