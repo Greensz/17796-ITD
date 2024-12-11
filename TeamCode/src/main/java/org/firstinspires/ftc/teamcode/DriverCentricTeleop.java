@@ -17,6 +17,7 @@ public class DriverCentricTeleop extends LinearOpMode {
         DriverCentricDrive driverCentricDrive= new DriverCentricDrive(this);
         Claw claw = new Claw(this);
         Arm arm = new Arm(this);
+        Rotator rotator = new Rotator(this);
 
         waitForStart();
         while (opModeIsActive()) {
@@ -24,6 +25,7 @@ public class DriverCentricTeleop extends LinearOpMode {
             claw.teleOp();
             slide.teleOp();
             arm.teleOp();
+            rotator.teleOp();
 
         }
     }

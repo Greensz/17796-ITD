@@ -10,7 +10,7 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 public class Slide {
 
-    public static int HighBasket =2500;
+    public static int HighBasket =2400;
     public static int RESET = 0;
     public final DcMotor slideLeft;
     public final DcMotor slideRight;
@@ -26,11 +26,11 @@ public class Slide {
         telemetry = opMode.telemetry;
 
         slideLeft = hardwareMap.get(DcMotor.class,"L Slide");
-        slideLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        slideLeft.setDirection(DcMotorSimple.Direction.REVERSE);
         slideLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         slideRight = hardwareMap.get(DcMotor.class, "R Slide");
-        slideRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        slideRight.setDirection(DcMotorSimple.Direction.FORWARD);
         slideRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         slideLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);

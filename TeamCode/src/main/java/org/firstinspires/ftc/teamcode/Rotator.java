@@ -9,7 +9,7 @@ public class Rotator {
     private static Gamepad Driver1;
     private static Gamepad Driver2;
     private static double Vertical = 0;
-    private static double Horizontal = 0;
+    private static double Horizontal = 0.3;
 
     public Rotator(OpMode opMode) {
         Driver1 = opMode.gamepad1;
@@ -21,9 +21,9 @@ public class Rotator {
     }
 
     public static void teleOp() throws InterruptedException {
-        if (Driver2.x){
+        if (Driver2.left_bumper){
             Rotator.setPosition(Horizontal);
         }
-        if (Driver2.y){
+        if (Driver2.right_bumper){
             Rotator.setPosition(Vertical);
         }}}

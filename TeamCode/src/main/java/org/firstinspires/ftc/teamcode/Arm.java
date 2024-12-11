@@ -9,16 +9,18 @@ public class Arm {
     private static Servo rightServo;
     private static Gamepad Driver1;
     private static Gamepad Driver2;
-    private static double scorePosition = 0.50;
+    private static double scorePosition = 0.59;
     private static double intakePosition = 0.15;
 
     public Arm(OpMode opMode) {
         Driver1 = opMode.gamepad1;
         Driver2 = opMode.gamepad2;
-        leftServo = (Servo) opMode.hardwareMap.get("L wrist");
-        rightServo = (Servo) opMode.hardwareMap.get("R wrist");
+        leftServo = (Servo) opMode.hardwareMap.get("LArm");
+        rightServo = (Servo) opMode.hardwareMap.get("RArm");
         leftServo.setDirection(Servo.Direction.REVERSE);
         rightServo.setDirection(Servo.Direction.FORWARD);
+        rightServo.setPosition(intakePosition);
+        leftServo.setPosition(intakePosition);
     }
 
     public static void teleOp() throws InterruptedException {

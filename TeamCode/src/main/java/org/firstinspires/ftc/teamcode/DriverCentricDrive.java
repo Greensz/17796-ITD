@@ -38,8 +38,8 @@ public class DriverCentricDrive {
             speed=1;
         }
         double y = -Driver1.left_stick_y;
-        double x = Driver1.right_stick_x * 1.1;
-        double rx = -Driver1.left_stick_x;
+        double x = Driver1.left_stick_x * 1.1;
+        double rx = Driver1.right_stick_x;
 
         double denominator = Math.max(Math.abs(y) + Math.abs(x) + Math.abs(rx), 1);
         double frontLeftPower = (y + x + rx) / denominator * speed;
