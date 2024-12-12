@@ -3,10 +3,11 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.DriverCentricDrive;
-import org.firstinspires.ftc.teamcode.Arm;
-import org.firstinspires.ftc.teamcode.Claw;
-import org.firstinspires.ftc.teamcode.Slide;
+import org.firstinspires.ftc.teamcode.subsystems.Arm;
+import org.firstinspires.ftc.teamcode.subsystems.Claw;
+import org.firstinspires.ftc.teamcode.subsystems.DriverCentricDrive;
+import org.firstinspires.ftc.teamcode.subsystems.Rotator;
+import org.firstinspires.ftc.teamcode.subsystems.Slide;
 
 
 @TeleOp
