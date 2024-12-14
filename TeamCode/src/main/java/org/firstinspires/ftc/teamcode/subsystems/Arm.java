@@ -31,4 +31,13 @@ public class Arm {
         if (Driver2.b) {
             rightServo.setPosition(intakePosition);
             leftServo.setPosition(intakePosition);
-        }}}
+        }}
+    public void ArmScore() {
+        rightServo.setPosition(scorePosition);
+        leftServo.setPosition(scorePosition);
+    }
+    public void ArmIntake() {
+        rightServo.setPosition(intakePosition);
+        leftServo.setPosition(intakePosition);
+    }
+}

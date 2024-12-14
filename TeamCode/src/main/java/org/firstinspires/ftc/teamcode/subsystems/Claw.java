@@ -26,4 +26,10 @@ public class Claw {
             }
             if (Driver2.y){
                 Claw.setPosition(Close);
-            }}}
+            }}
+    public void setClawClosed() {
+        Claw.setPosition(Close);
+    }
+    public void setClawOpen() {
+        Claw.setPosition(Open);
+    }}

@@ -26,4 +26,11 @@ public class Rotator {
         }
         if (Driver2.right_bumper){
             Rotator.setPosition(Vertical);
-        }}}
+        }}
+    public void Horizontal() {
+        Rotator.setPosition(Horizontal);
+    }
+    public void Vertical() {
+        Rotator.setPosition(Vertical);
+    }
+}
