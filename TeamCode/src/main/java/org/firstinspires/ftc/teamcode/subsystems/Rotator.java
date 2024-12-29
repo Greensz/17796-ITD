@@ -8,8 +8,8 @@ public class Rotator {
     private static Servo Rotator;
     private static Gamepad Driver1;
     private static Gamepad Driver2;
-    private static double Vertical = 0;
-    private static double Horizontal = 0.3;
+    private static double Vertical = 0.3;
+    private static double Horizontal = 0;
 
     public Rotator(OpMode opMode) {
         Driver1 = opMode.gamepad1;
